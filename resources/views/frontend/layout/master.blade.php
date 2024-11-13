@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/page-contents.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="maincontainer">
