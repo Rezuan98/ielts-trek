@@ -1,0 +1,95 @@
+
+
+/* Basic styling for the banner grid */
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 1rem; /* Space between columns */
+    
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+
+.container1 {
+    height: 500px;
+   
+    background-color: #e9ecef;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container2 {
+    height: 500px;
+    
+    background-color: #76d3df;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+
+@media (max-width: 768px) {
+    .banner {
+        grid-template-columns: 1fr; /* Stacks containers on small screens */
+    }
+}
+
+
+
+/* learning tools start */
+
+/* Container styling for the grid */
+.learning-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 1rem; /* Space between cards */
+    padding: 1rem;
+    margin: 0 auto; /* Center the grid on the page */
+    max-width: 100%; /* Constrain the grid's width to fit the page */
+    box-sizing: border-box;
+}
+
+/* Styling for each card */
+.container3 {
+    background-color: #3b70a5;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    height: 300px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for cards */
+.container3:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .learning-tools {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns for narrow screens */
+        padding: 0.5rem;
+        margin: 0 auto;
+    }
+    .container3 {
+        padding: 1rem;
+        height: auto; /* Allow cards to adjust height based on content */
+    }
+}
+
+@media (max-width: 480px) {
+    .learning-tools {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+        gap: 0.5rem;
+    }
+    .container3 {
+        padding: 0.75rem;
+    }
+}

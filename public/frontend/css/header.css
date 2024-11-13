@@ -1,0 +1,97 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(196, 130, 6, 0.886);
+    color: white;
+    padding: 5px;
+    
+}
+.navbar-brand {
+
+    display: flex;
+
+}
+.navbar-brand img {
+      
+    max-height: 60px; /* Adjust this height as per your navbar height */
+    height: auto; /* Keeps the aspect ratio */
+    width: auto;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+.navbar-brand a {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #ffcc00;
+}
+
+/* Mobile toggle button */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    /* Show links when toggle is active */
+    .navbar.active .navbar-links {
+        display: flex;
+    }
+}
